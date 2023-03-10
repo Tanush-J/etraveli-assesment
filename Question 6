@@ -1,0 +1,33 @@
+6.Given a Directed Graph with V vertices (Numbered from 0 to V-1) and E edges, check
+whether it contains any cycle or not.
+Ans:
+//Incomplete Code, can only create a graph
+class node {
+    public:
+        int val;
+        vector<node*> link;
+        node(int value){
+            this->val = value;
+        }
+};
+int main() {
+    char res;
+    int value, n;
+    vector<node*> nodeList;
+    cout << "Enter the number of vertices: ";
+    cin >> n;
+    for(int i=0 ; i<n; i++){
+        node *temp = new node(i);
+        nodeList.push_back(temp);
+    }
+    for(int i=0; i<nodeList.size(); i++){
+        for(int j=0; j<nodeList.size(); j++){
+            if(i==j) continue;
+            cout << endl << "Is node with value " << nodeList[i]->val << " connected to " << nodeList[j]->val << " (Y/N): ";
+            cin >> res;
+            if(res=='Y'||res=='y'){
+                nodeList[i]->link.push_back(nodeList[j]);
+            }
+        }
+    }
+}
