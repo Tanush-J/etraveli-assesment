@@ -14,7 +14,7 @@ int main() {
     int val, n;
     cout << "Enter the value for head node: ";
     cin >> val;
-    listNode *head = new listNode(val, head), *ans = head;
+    listNode *head = new listNode(val, head), *ans = head, *tail;
     cout << endl << "Enter the number of nodes you want: ";
     cin >> n;
     for(int i=0; i<n; i++){
@@ -23,7 +23,10 @@ int main() {
         listNode *temp = new listNode(val, NULL);
         head->next = temp;
         head = head->next;
+        tail = temp;
     }
+    head = ans;
+    tail->next = head;
     cout << endl << "\nPrinted List is: ";
     for(int i=0; i<=n; i++){
         cout << ans->val;
