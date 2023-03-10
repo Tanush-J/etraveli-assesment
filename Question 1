@@ -13,7 +13,6 @@ bool isPalindrome(string &s){
 int main() {
     string str;
     cin >> str;
-    cout << "String is: " << str;
     if(str.empty()){
         cout << "Empty";
         return 0;
