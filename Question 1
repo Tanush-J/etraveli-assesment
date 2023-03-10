@@ -1,6 +1,8 @@
 1.Write a Java program to find out whether the given String is Palindrome or not.
 Ans:
 
+//Link: https://leetcode.com/playground/KikynkPh
+
 bool isPalindrome(string &s){
     for(int i=0, j=s.size()-1; i<j; i++, j--){
         if(s[i]!=s[j]){
