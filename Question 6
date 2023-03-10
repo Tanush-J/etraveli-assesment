@@ -1,7 +1,10 @@
 6.Given a Directed Graph with V vertices (Numbered from 0 to V-1) and E edges, check
 whether it contains any cycle or not.
 Ans:
+
 //Incomplete Code, can only create a graph
+// Link: https://leetcode.com/playground/jQPKphwx
+
 class node {
     public:
         int val;
