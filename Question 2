@@ -1,0 +1,33 @@
+Write a Java program to print the nodes present in the Circular LinkedList
+Ans: 
+class listNode {
+    public:
+        int val;
+        listNode *next;
+        listNode(int value, listNode *nextNode) {
+            this->val = value;
+            this->next = nextNode;
+        }
+};
+
+int main() {
+    int val, n;
+    cout << "Enter the value for head node: ";
+    cin >> val;
+    listNode *head = new listNode(val, head), *ans = head;
+    cout << endl << "Enter the number of nodes you want: ";
+    cin >> n;
+    for(int i=0; i<n; i++){
+        cout << endl << "Enter the value for new node: ";
+        cin >> val;
+        listNode *temp = new listNode(val, NULL);
+        head->next = temp;
+        head = head->next;
+    }
+    cout << endl << "\nPrinted List is: ";
+    for(int i=0; i<=n; i++){
+        cout << ans->val;
+        ans=ans->next;
+        if(i!=n) cout << "->";
+    }
+}
